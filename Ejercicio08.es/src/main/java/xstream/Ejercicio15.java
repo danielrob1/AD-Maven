@@ -41,6 +41,12 @@ public class Ejercicio15 {
 			e.printStackTrace();
 		} finally {
 			try {
+				xS.alias("familia", ListaPersonas.class);
+				xS.alias("miembro", Persona.class);
+				xS.addImplicitCollection(ListaPersonas.class,"lista");
+				xS.aliasField("primerApellido", Persona.class, "apellido1");
+				xS.aliasField("segundoApellido", Persona.class, "apellido2");
+				xS.useAttributeFor(Persona.class, "nombre");
 				xS.toXML(lp, new FileOutputStream(new File("Ejercicio15.xml")));
 				oIS.close();
 			} catch (IOException e) {

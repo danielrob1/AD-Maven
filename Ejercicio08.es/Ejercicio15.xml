@@ -1,27 +1,21 @@
-<xstream.ListaPersonas>
-  <lista>
-    <ficheros.ejercicio6.Persona>
-      <nombre>Dan</nombre>
-      <apellido1>Rob</apellido1>
-      <apellido2>Cam</apellido2>
-      <nacimiento>2004-09-16 22:00:00.0 UTC</nacimiento>
-    </ficheros.ejercicio6.Persona>
-    <ficheros.ejercicio6.Persona>
-      <nombre>Ale</nombre>
-      <apellido1>Jim</apellido1>
-      <apellido2>Arm</apellido2>
-      <nacimiento>2003-12-14 23:00:00.0 UTC</nacimiento>
-    </ficheros.ejercicio6.Persona>
-    <ficheros.ejercicio6.Persona>
-      <nombre>Ivan</nombre>
-      <apellido1>Carrasco</apellido1>
-      <apellido2>Sanchez</apellido2>
-      <nacimiento>2004-09-30 22:00:00.0 UTC</nacimiento>
-    </ficheros.ejercicio6.Persona>
-    <ficheros.ejercicio6.Persona>
-      <nombre>Dolores</nombre>
-      <apellido1>Bueno</apellido1>
-      <apellido2>Perez</apellido2>
-    </ficheros.ejercicio6.Persona>
-  </lista>
-</xstream.ListaPersonas>
+<familia>
+  <miembro nombre="Dan">
+    <primerApellido>Rob</primerApellido>
+    <segundoApellido>Cam</segundoApellido>
+    <nacimiento>2004-09-16 22:00:00.0 UTC</nacimiento>
+  </miembro>
+  <miembro nombre="Ale">
+    <primerApellido>Jim</primerApellido>
+    <segundoApellido>Arm</segundoApellido>
+    <nacimiento>2003-12-14 23:00:00.0 UTC</nacimiento>
+  </miembro>
+  <miembro nombre="Ivan">
+    <primerApellido>Carrasco</primerApellido>
+    <segundoApellido>Sanchez</segundoApellido>
+    <nacimiento>2004-09-30 22:00:00.0 UTC</nacimiento>
+  </miembro>
+  <miembro nombre="Dolores">
+    <primerApellido>Bueno</primerApellido>
+    <segundoApellido>Perez</segundoApellido>
+  </miembro>
+</familia>
