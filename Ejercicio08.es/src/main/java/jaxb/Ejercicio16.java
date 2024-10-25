@@ -20,6 +20,7 @@ public class Ejercicio16{
 			jC = JAXBContext.newInstance(Examen.class);
 			Unmarshaller uM= jC.createUnmarshaller();
 			examen = (Examen) uM.unmarshal(new File("Ejercicio16.xml"));
+			//Hacer marshall para hacerlo persistente
 		} catch (JAXBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
