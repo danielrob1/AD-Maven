@@ -1,0 +1,12 @@
+<familia>
+  <miembro nombre="Margarita">
+    <primerApellido>Alcantara</primerApellido>
+    <segundoApellido>Alejo</segundoApellido>
+    <nacimiento>2000-05-05 01:00:00 CET</nacimiento>
+  </miembro>
+  <miembro nombre="Carlos">
+    <primerApellido>Ruiz</primerApellido>
+    <segundoApellido>Sanz</segundoApellido>
+    <nacimiento>1998-12-12 01:00:00 CET</nacimiento>
+  </miembro>
+</familia>

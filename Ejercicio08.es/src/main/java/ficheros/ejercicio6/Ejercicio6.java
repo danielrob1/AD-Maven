@@ -17,6 +17,14 @@ public class Ejercicio6 {
 	private static Scanner sc = new Scanner(System.in);
 	private static ObjectOutputStream oOS; 
 	
+	public static String getDoctrabajoIn() {
+		return DOCTRABAJO_IN;
+	}
+	
+	public static ObjectOutputStream getoOs() {
+		return oOS;
+	}
+	
 	public static void inicializar() {
 		try {
 			File file = new File(DOCTRABAJO_IN);
@@ -58,7 +66,6 @@ public class Ejercicio6 {
 	 * 		objeto a escribir
 	 */
 	public static void escribirObjeto(Persona persona) {
-
 		try {
 			oOS.writeObject(persona);
 		} catch (IOException e) {
