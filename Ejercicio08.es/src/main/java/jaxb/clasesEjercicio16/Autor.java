@@ -73,4 +73,10 @@ public class Autor {
 		this.entidadTrabajo = entidadTrabajo;
 	}
 
+	@Override
+	public String toString() {
+		return "Autor: " + apellido1 + " " + apellido2 + " " + nombre + " " + id + " " + entidadTrabajo + " " + puesto;
+	}
+	
+
 }
