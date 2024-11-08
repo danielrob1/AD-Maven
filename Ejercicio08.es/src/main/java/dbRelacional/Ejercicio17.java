@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
+
+import org.apache.poi.util.SystemOutLogger;
 
 import utilidades.Utilidades;
 
@@ -16,15 +19,48 @@ public class Ejercicio17 {
 	}
 
 	public static void main(String[] args) {
-		establecerConexionSQLite();
+		//establecerConexionSQLite();
 		//borrarTablaDepartamentos();
-		//establecerConexionMySQL();
+		establecerConexionMySQL();
 		//listarDptos();
-		anadirDpto();
+		//anadirDpto();
 		//borrarDpto("Tortured Poets");
-		listarDptos();
+		//listarDptos();
+		anadirEmpleado("Manuel","Garcia","Lopez","Contabilidad");
 		cerrarConexion();
+		
 
+	}
+
+	private static void anadirEmpleado(String nombre, String apellido1, String apellido2, String department) {
+		Scanner in = new Scanner(System.in);
+		String sentenciaSqlBuscarDpto = "Select dept_no from departamentos where dnombre=?";
+		try {
+			PreparedStatement sentenciaBuscar = con.prepareStatement(sentenciaSqlBuscarDpto);
+			sentenciaBuscar.setString(1, department);
+			ResultSet rs= sentenciaBuscar.executeQuery();
+			rs.next();
+			if(rs.getInt(1)!=0) {
+				String sentenciaSql = "INSERT INTO empleados (nombre, apellido1, apellido2, departamento) values (?,?,?,?)";
+				PreparedStatement sentencia= null;
+				try {
+					sentencia = con.prepareStatement(sentenciaSql);
+					sentencia.setString(1, nombre);
+					sentencia.setString(2, apellido1);
+					sentencia.setString(3, apellido2);
+					sentencia.setString(4, department);
+					sentencia.executeUpdate();
+					System.out.println("Se ha añadido el empleado");
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			} else {
+				System.out.println("Departamento no encontrado");
+			}
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private static void anadirDpto() {
