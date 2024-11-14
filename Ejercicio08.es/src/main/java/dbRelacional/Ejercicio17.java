@@ -26,7 +26,7 @@ public class Ejercicio17 {
 		//anadirDpto();
 		//borrarDpto("Tortured Poets");
 		//listarDptos();
-		anadirEmpleado("Manuel","Garcia","Lopez","Contabilidad");
+		anadirEmpleado("Manuel","Garcia","Lopez","Ventas");
 		cerrarConexion();
 		
 
@@ -48,7 +48,7 @@ public class Ejercicio17 {
 					sentencia.setString(1, nombre);
 					sentencia.setString(2, apellido1);
 					sentencia.setString(3, apellido2);
-					sentencia.setString(4, department);
+					sentencia.setInt(4, rs.getInt(1));
 					sentencia.executeUpdate();
 					System.out.println("Se ha añadido el empleado");
 				}catch(SQLException e) {
